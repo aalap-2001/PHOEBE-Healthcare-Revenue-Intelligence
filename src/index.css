@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+  --color-ink: #0F1B2D;
+  --color-muted: #5B6B82;
+  --color-line: #E3E8F0;
+  --color-hair: #EEF1F6;
+  --color-ground: #F4F6FA;
+
+  --color-brand: #2F5BEA;
+  --color-brand-dark: #2549C4;
+  --color-brand-soft: #EEF2FD;
+
+  /* Below peer median */
+  --color-warn: #E8A317;
+  --color-warn-soft: #FFF1D6;
+  --color-warn-ink: #8A5300;
+
+  /* Above peer median */
+  --color-good: #1F9E8A;
+  --color-good-soft: #E3F5F1;
+  --color-good-ink: #0B6B5E;
+  --color-above: #8FB3E8;
+
+  --color-band: #DCE4F5;
+  --color-axis: #C5CFE0;
+
+  /* Navy surfaces */
+  --color-navy-line: #2A3A55;
+  --color-navy-mute: #9FB0CC;
+  --color-navy-soft: #C9D4E8;
+}
+
+html, body { background: var(--color-ground); }
+body {
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #C5CFE0 transparent;
+}
+
+/* Range slider: filled track drawn inline, round thumb. */
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  outline: none;
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2F5BEA;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px rgba(47, 91, 234, .35), 0 1px 3px rgba(15, 27, 45, .25);
+}
+.range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2F5BEA;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px rgba(47, 91, 234, .35);
+}
+.range:focus-visible::-webkit-slider-thumb { outline: 2px solid #2F5BEA; outline-offset: 2px; }
+.range:focus-visible::-moz-range-thumb { outline: 2px solid #2F5BEA; outline-offset: 2px; }
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0s !important; }
+}
