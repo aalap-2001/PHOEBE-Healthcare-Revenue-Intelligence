@@ -37,7 +37,7 @@ function Hero() {
     <div className="flex flex-col justify-between gap-4 rounded-2xl bg-ink p-5 text-white sm:p-6">
       <div>
         <div className="text-[12px] font-semibold tracking-[.08em] text-navy-mute">ESTIMATED ANNUAL UPSIDE</div>
-        <div className="mt-3 text-[80px] font-extrabold leading-none tracking-tight text-[#FF8A00]" aria-live="polite">
+        <div className="mt-3 text-[77px] font-extrabold leading-none tracking-tight text-[#FF8A00]" aria-live="polite">
           {fmtMoney(OPP.high)}
         </div>
         <div className="mt-3 text-[14px] text-navy-soft">if every gap closes to the local peer median {payerScope}</div>
